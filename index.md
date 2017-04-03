@@ -8,22 +8,29 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+```
+import std.io
+import std.math
 
-# Header 1
-## Header 2
-### Header 3
+struct point:
+    x: floating get set;
+    y: floating get set;
 
-- Bulleted
-- List
+    this(x, y: floating):
+        this.x = x;
+        this.y = y;
 
-1. Numbered
-2. List
+tostr({x, y}: @point) => $"({x}, {y})";
 
-**Bold** and _Italic_ and `Code` text
+main(args: string[]):
+    let step = pi / 5;
 
-[Link](url) and ![Image](src)
+    let xs = map(1...10, x => cos(x * step));
+    let ys = map(1...10, y => sin(y * step));
+
+    let pts = zip(xs, ys).map({x, y} => new point(x, y));
+
+    each(pts, writeln);
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
