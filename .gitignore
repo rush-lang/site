@@ -1,0 +1,5 @@
+_site/
+_serve/
+*~
+**/.DS_Store
+**/*.bak*
