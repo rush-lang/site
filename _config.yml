@@ -1,5 +1,6 @@
-repository: rtlayzell/rush-www
+repository: rtlayzell/rush
 theme: jekyll-theme-minimal
 title: The Rush Programming Language
 url: https://www.rush-lang.org
 enforce_ssl: www.rush-lang.org
+show_downloads: true
